@@ -1,20 +1,41 @@
-<form class="example-form">
+<form class="example-form" [formGroup]="userForm">
   <mat-form-field class="example-full-width">
     <mat-label>Full Name</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="" />
+    <input
+      matInput
+      placeholder="Full Name"
+      value=""
+      formControlName="fullName"
+    />
   </mat-form-field>
-
   <mat-form-field class="example-full-width">
     <mat-label>Email</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    <input matInput placeholder="Email" formControlName="email" />
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Password</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    <input
+      matInput
+      placeholder="Password"
+      formControlName="password"
+      type="password"
+    />
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Confirm Password</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    <input
+      matInput
+      placeholder="Confirm Password"
+      formControlName="confirmPass"
+      type="password"
+    />
   </mat-form-field>
-  <button mat-raised-button color="primary">Add User</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="addUser(userForm)"
+    type="button"
+  >
+    Add User
+  </button>
 </form>
