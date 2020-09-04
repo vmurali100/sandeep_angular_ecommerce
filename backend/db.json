@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "fullName": "Murali",
+      "email": "vmurali100@gmail.com",
+      "password": "123",
+      "confirmPass": "123",
+      "id": 1
+    },
+    {
+      "fullName": "sandeep",
+      "email": "sandeep@gmail.com",
+      "password": "123",
+      "confirmPass": "123",
+      "id": 2
+    },
+    {
+      "fullName": "sam",
+      "email": "sama",
+      "password": "ams",
+      "confirmPass": "aasa",
+      "id": 3
+    }
+  ]
+}

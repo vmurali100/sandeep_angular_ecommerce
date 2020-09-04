@@ -1,6 +1,9 @@
+import { CommonService } from "./shared/common.service";
 import { Component } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { DialogueContentComponent } from "./components/dialogue-content/dialogue-content.component";
+import { Route } from "@angular/compiler/src/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-root",
@@ -8,8 +11,20 @@ import { DialogueContentComponent } from "./components/dialogue-content/dialogue
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  constructor(private dialog: MatDialog) {}
+  title = "client";
+  constructor(
+    private dialog: MatDialog,
+    private commonService: CommonService,
+    private route: Router
+  ) {}
   registerUser() {
-    this.dialog.open(DialogueContentComponent);
+    const dialogRef = this.dialog.open(DialogueContentComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      this.commonService.registerUser(result).subscribe((res) => {
+        console.log("User Added Successfully");
+        this.route.navigate(["login"]);
+      });
+    });
   }
 }

@@ -1,1 +1,27 @@
-<p>login works!</p>
+<form class="example-form" [formGroup]="userForm">
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" formControlName="email" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      placeholder="Password"
+      formControlName="password"
+      type="password"
+    />
+  </mat-form-field>
+
+  <div id="buttonDiv">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="validateUser(userForm)"
+      type="button"
+      [disabled]="userForm.invalid"
+    >
+      Login
+    </button>
+  </div>
+</form>

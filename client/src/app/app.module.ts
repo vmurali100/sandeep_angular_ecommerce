@@ -10,6 +10,7 @@ import { ProductListComponent } from "./components/product-list/product-list.com
 import { HomeComponent } from "./components/home/home.component";
 import { DialogueContentComponent } from "./components/dialogue-content/dialogue-content.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     DemoMaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -35,6 +35,7 @@
     color="primary"
     (click)="addUser(userForm)"
     type="button"
+    [disabled]="userForm.invalid"
   >
     Add User
   </button>
