@@ -8,9 +8,11 @@
       class="example-icon"
       aria-label="Example icon-button with share icon"
       (click)="registerUser()"
+      *ngIf="!loggedInUser"
     >
       <mat-icon>account_circle</mat-icon>
     </button>
+    <span>{{ loggedInUser }}</span>
 
     <button
       mat-icon-button
@@ -19,6 +21,16 @@
       routerLink="cart"
     >
       <mat-icon>shopping_cart</mat-icon>
+      <span *ngIf="shoppingItems.length !== 0">{{ shoppingItems.length }}</span>
+    </button>
+
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      (click)="logout()"
+    >
+      <mat-icon *ngIf="loggedInUser">exit_to_app</mat-icon>
     </button>
   </mat-toolbar>
 </p>

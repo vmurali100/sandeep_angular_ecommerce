@@ -1,3 +1,4 @@
+import { User } from "./shared/User";
 import { CommonService } from "./shared/common.service";
 import { Component } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
@@ -12,11 +13,26 @@ import { Router } from "@angular/router";
 })
 export class AppComponent {
   title = "client";
+  loggedInUser;
+  shoppingItems: any = [];
   constructor(
     private dialog: MatDialog,
     private commonService: CommonService,
     private route: Router
   ) {}
+  ngOnInit() {
+    this.commonService.loginInfo.subscribe((res) => {
+      this.loggedInUser = res["fullName"];
+    });
+    this.commonService.addToCart.subscribe((product) => {
+      console.log(product);
+      this.shoppingItems.push(product);
+      console.log(this.shoppingItems.length);
+    });
+    this.commonService.updateCart.subscribe((data) => {
+      this.shoppingItems = data;
+    });
+  }
   registerUser() {
     const dialogRef = this.dialog.open(DialogueContentComponent);
 
@@ -26,5 +42,9 @@ export class AppComponent {
         this.route.navigate(["login"]);
       });
     });
+  }
+  logout() {
+    this.commonService.logout({});
+    this.route.navigate(["logout"]);
   }
 }

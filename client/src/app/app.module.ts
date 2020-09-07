@@ -11,6 +11,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { DialogueContentComponent } from "./components/dialogue-content/dialogue-content.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from "@angular/common/http";
     ProductListComponent,
     HomeComponent,
     DialogueContentComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

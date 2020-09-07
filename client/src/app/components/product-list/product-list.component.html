@@ -1,1 +1,16 @@
 <p>product-list works!</p>
+<div id="productList">
+  <mat-card *ngFor="let product of products">
+    <h3>Item Name : {{ product.itemName }}</h3>
+    <h3>Item Rate : {{ product.itemRate }}</h3>
+    <h3>Item Desc : {{ product.itemDesc }}</h3>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="buyItem(product)"
+      type="button"
+    >
+      Buy
+    </button>
+  </mat-card>
+</div>

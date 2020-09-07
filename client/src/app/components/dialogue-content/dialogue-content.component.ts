@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { User, SampleUser } from "./User.interface";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-dialogue-content",
   templateUrl: "./dialogue-content.component.html",
@@ -10,7 +11,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 export class DialogueContentComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<DialogueContentComponent>,
-    @Inject(MAT_DIALOG_DATA) public data
+    @Inject(MAT_DIALOG_DATA) public data,
+    public router: Router
   ) {}
 
   users: SampleUser[] = [{ fname: "Murali", lname: "Krishna" }];
@@ -26,5 +28,9 @@ export class DialogueContentComponent implements OnInit {
 
   addUser(userForm: FormGroup) {
     this.dialogRef.close(userForm.value);
+  }
+  login() {
+    this.dialogRef.close();
+    this.router.navigate(["login"]);
   }
 }

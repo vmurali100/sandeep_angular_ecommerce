@@ -1,0 +1,11 @@
+mat-card {
+  width: 20%;
+  float: left;
+  margin: 10px;
+}
+
+div#productList {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}

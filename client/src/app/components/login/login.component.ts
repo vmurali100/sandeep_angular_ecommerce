@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private commonService: CommonService) {}
 
   ngOnInit(): void {}
-
+  users: User[] = [];
   userForm = new FormGroup({
     email: new FormControl("", Validators.required),
     password: new FormControl("", Validators.required),
@@ -21,7 +21,17 @@ export class LoginComponent implements OnInit {
 
   validateUser() {
     this.commonService.getAllUsers().subscribe((res) => {
-      // this.router.navigate(["product-list"]);
+      this.commonService.getAllUsers().subscribe((res: User[]) => {
+        this.users = res;
+        let user: User = this.userForm.value;
+        let loginUser = res.find((dbUser) => {
+          return dbUser.email == user.email && dbUser.password == user.password;
+        });
+        if (loginUser) {
+          this.commonService.sendLoginInfo(loginUser);
+          this.router.navigate(["product-list"]);
+        }
+      });
     });
   }
 }

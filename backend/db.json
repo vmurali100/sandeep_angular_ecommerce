@@ -15,11 +15,148 @@
       "id": 2
     },
     {
-      "fullName": "sam",
-      "email": "sama",
-      "password": "ams",
-      "confirmPass": "aasa",
       "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    }
+  ],
+  "products": [
+    {
+      "itemName": "Item1",
+      "itemRate": 120,
+      "itemDesc": "About Item"
+    },
+    {
+      "itemName": "Item2",
+      "itemRate": 130,
+      "itemDesc": "About Item"
+    },
+    {
+      "itemName": "Item3",
+      "itemRate": 140,
+      "itemDesc": "About Item"
+    },
+    {
+      "itemName": "Item4",
+      "itemRate": 150,
+      "itemDesc": "About Item"
+    },
+    {
+      "itemName": "Item5",
+      "itemRate": 160,
+      "itemDesc": "About Item"
+    }
+  ],
+  "shoppingItems": [
+    {
+      "itemName": "Item2",
+      "itemRate": 130,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 1
+    },
+    {
+      "itemName": "Item3",
+      "itemRate": 140,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 2
+    },
+    {
+      "itemName": "Item3",
+      "itemRate": 140,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 3
+    },
+    {
+      "itemName": "Item4",
+      "itemRate": 150,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 4
+    },
+    {
+      "itemName": "Item2",
+      "itemRate": 130,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 5
+    },
+    {
+      "itemName": "Item3",
+      "itemRate": 140,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 6
+    },
+    {
+      "itemName": "Item4",
+      "itemRate": 150,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 7
+    },
+    {
+      "itemName": "Item1",
+      "itemRate": 120,
+      "itemDesc": "About Item",
+      "purchedUser": "sandeep@gmail.com",
+      "id": 8
+    },
+    {
+      "itemName": "Item2",
+      "itemRate": 130,
+      "itemDesc": "About Item",
+      "purchedUser": "sandeep@gmail.com",
+      "id": 9
+    },
+    {
+      "itemName": "Item3",
+      "itemRate": 140,
+      "itemDesc": "About Item",
+      "purchedUser": "sandeep@gmail.com",
+      "id": 10
     }
   ]
 }
