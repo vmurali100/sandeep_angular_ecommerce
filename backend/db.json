@@ -1,4 +1,13 @@
 {
+  "userProfile": [
+    {
+      "fullName": "Murali",
+      "email": "vmurali100@gmail.com",
+      "password": "123",
+      "confirmPass": "123",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "fullName": "Murali",
@@ -19,45 +28,6 @@
     },
     {
       "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
-      "id": 16
-    },
-    {
-      "id": 17
     }
   ],
   "products": [
@@ -157,6 +127,48 @@
       "itemDesc": "About Item",
       "purchedUser": "sandeep@gmail.com",
       "id": 10
+    },
+    {
+      "itemName": "Item2",
+      "itemRate": 130,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 11
+    },
+    {
+      "itemName": "Item3",
+      "itemRate": 140,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 12
+    },
+    {
+      "itemName": "Item3",
+      "itemRate": 140,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 13
+    },
+    {
+      "itemName": "Item4",
+      "itemRate": 150,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 14
+    },
+    {
+      "itemName": "Item3",
+      "itemRate": 140,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 15
+    },
+    {
+      "itemName": "Item2",
+      "itemRate": 130,
+      "itemDesc": "About Item",
+      "purchedUser": "vmurali100@gmail.com",
+      "id": 16
     }
   ]
 }

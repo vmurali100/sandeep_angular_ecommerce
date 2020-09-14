@@ -12,6 +12,7 @@ import { DialogueContentComponent } from "./components/dialogue-content/dialogue
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { LogoutComponent } from './components/logout/logout.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LogoutComponent } from './components/logout/logout.component';
     HomeComponent,
     DialogueContentComponent,
     LogoutComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

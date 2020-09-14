@@ -1,1 +1,23 @@
-<p>cart works!</p>
+<div id="productList">
+  <mat-card *ngFor="let product of shoppingItems; let i = index">
+    <h3>Item Name : {{ product.itemName }}</h3>
+    <h3>Item Rate : {{ product.itemRate }}</h3>
+    <h3>Item Desc : {{ product.itemDesc }}</h3>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="deleteProduct(i)"
+      type="button"
+    >
+      Delete
+    </button>
+  </mat-card>
+
+  <h2>
+    Total Amount Payble : <span>{{ totalAmountPayble }}</span>
+  </h2>
+
+  <button mat-raised-button color="primary" type="button">
+    Prceed To Payments
+  </button>
+</div>

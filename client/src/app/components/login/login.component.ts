@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
           return dbUser.email == user.email && dbUser.password == user.password;
         });
         if (loginUser) {
+          this.commonService.setProfile(loginUser);
           this.commonService.sendLoginInfo(loginUser);
           this.router.navigate(["product-list"]);
         }

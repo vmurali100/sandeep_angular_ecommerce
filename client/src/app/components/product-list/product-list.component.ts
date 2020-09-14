@@ -13,6 +13,8 @@ export class ProductListComponent implements OnInit {
   constructor(private commonService: CommonService) {}
 
   ngOnInit(): void {
+    if (this.commonService.checkLoggedInUser()) {
+    }
     this.commonService.getAllProduts().subscribe((res) => {
       this.products = res;
     });
@@ -23,12 +25,10 @@ export class ProductListComponent implements OnInit {
     this.commonService.addItemToCart(product).subscribe((res) => {
       console.log("product Added to Cart");
     });
-    console.log(product);
   }
 
   checkShoppingItems() {
     this.commonService.getshoppingItemsFromServe().subscribe((products) => {
-      console.log(products);
       this.allProducts = products;
       let loggedInUser = this.commonService.getLoggedInUser();
       this.currentUserProducts = this.allProducts.filter(

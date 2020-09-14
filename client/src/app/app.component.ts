@@ -21,13 +21,13 @@ export class AppComponent {
     private route: Router
   ) {}
   ngOnInit() {
+    this.loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
     this.commonService.loginInfo.subscribe((res) => {
-      this.loggedInUser = res["fullName"];
+      this.loggedInUser = res;
     });
     this.commonService.addToCart.subscribe((product) => {
-      console.log(product);
       this.shoppingItems.push(product);
-      console.log(this.shoppingItems.length);
     });
     this.commonService.updateCart.subscribe((data) => {
       this.shoppingItems = data;
@@ -35,7 +35,6 @@ export class AppComponent {
   }
   registerUser() {
     const dialogRef = this.dialog.open(DialogueContentComponent);
-
     dialogRef.afterClosed().subscribe((result) => {
       this.commonService.registerUser(result).subscribe((res) => {
         console.log("User Added Successfully");
@@ -44,7 +43,13 @@ export class AppComponent {
     });
   }
   logout() {
-    this.commonService.logout({});
+    this.loggedInUser = { fullName: "" };
+    this.commonService.logout({ fullName: "" });
+    localStorage.clear();
     this.route.navigate(["logout"]);
+  }
+
+  showProfile() {
+    this.route.navigate(["profile"]);
   }
 }
